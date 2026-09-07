@@ -1,0 +1,10 @@
+# Pinned to the exact versions this baseline was built and tested with (reproducibility).
+langgraph==1.2.11
+langchain==1.4.0
+langchain-core==1.6.2
+langchain-openai==1.6.0
+langchain-anthropic==1.7.1
+langchain-google-genai==4.4.0
+langchain-ollama==1.1.0
+python-dotenv==1.2.3
+requests==2.32.5

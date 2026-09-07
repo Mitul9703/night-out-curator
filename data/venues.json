@@ -1,0 +1,82 @@
+{
+  "_note": "Curated snapshot of real Tempe, AZ venues (names/coords/cuisine reflect OpenStreetMap/Geoapify data). Fields 'price_per_person', 'vegan', 'vibe', 'close_hour' and 'website_content' are annotations used as GROUND TRUTH for evaluation. The baseline's structured tools intentionally expose only the subset a free API actually returns (name, category, cuisine, coords, website, sparse opening_hours) — price and vibe are NOT exposed and must be recovered by the Phase-2 web-fetch enrichment agent.",
+  "venues": [
+    {"id": "pita_jungle", "name": "Pita Jungle", "category": "restaurant", "cuisine": "mediterranean",
+     "lat": 33.4269, "lon": -111.9401, "website": "https://pitajungle.com",
+     "opening_hours_public": "Mo-Su 11:00-22:00", "vegan_tag": true,
+     "price_per_person": 18, "vegan": true, "close_hour": 22, "vibe": ["chill", "casual", "healthy"],
+     "website_content": "Pita Jungle, Mill Ave Tempe. Mediterranean. Extensive vegan & vegetarian menu. Entrees $12-22 (about $18/person). Relaxed, casual, health-conscious vibe. Open daily 11am-10pm."},
+
+    {"id": "green_vegetarian", "name": "Green New American Vegetarian", "category": "restaurant", "cuisine": "vegan",
+     "lat": 33.4231, "lon": -111.9256, "website": "https://greenvegetarian.com",
+     "opening_hours_public": null, "vegan_tag": true,
+     "price_per_person": 16, "vegan": true, "close_hour": 21, "vibe": ["chill", "casual"],
+     "website_content": "Green - 100% vegan comfort food, Tempe. Bowls, tso soy nuggets, shakes. ~$14-18/person. Casual, chill. Open Mon-Sat 11am-9pm."},
+
+    {"id": "cornish_pasty", "name": "Cornish Pasty Co", "category": "restaurant", "cuisine": "british",
+     "lat": 33.4225, "lon": -111.9403, "website": "https://cornishpastyco.com",
+     "opening_hours_public": "Mo-Su 11:00-24:00", "vegan_tag": false,
+     "price_per_person": 15, "vegan": false, "close_hour": 24, "vibe": ["quirky", "cozy", "cave-like"],
+     "website_content": "Cornish Pasty Co - handmade pasties, Tempe. Some vegetarian pasties; limited vegan. ~$13-17/person. Dark, cozy, quirky cave-like interior. Open till midnight."},
+
+    {"id": "culinary_dropout", "name": "Culinary Dropout", "category": "restaurant", "cuisine": "american",
+     "lat": 33.4300, "lon": -111.9260, "website": "https://culinarydropout.com",
+     "opening_hours_public": null, "vegan_tag": false,
+     "price_per_person": 30, "vegan": false, "close_hour": 23, "vibe": ["lively", "trendy", "loud"],
+     "website_content": "Culinary Dropout, Tempe - gastropub, pretzel fondue, fried chicken. ~$25-35/person. Lively, trendy, loud, big patio. Open till 11pm."},
+
+    {"id": "loco_patron", "name": "Loco Patron", "category": "restaurant", "cuisine": "mexican",
+     "lat": 33.4270, "lon": -111.9430, "website": "https://locopatron.com",
+     "opening_hours_public": null, "vegan_tag": false,
+     "price_per_person": 20, "vegan": true, "close_hour": 24, "vibe": ["lively", "festive"],
+     "website_content": "Loco Patron - Mill Ave Mexican & tequila bar. Vegan-friendly (impossible tacos, veggie fajitas). ~$18-24/person. Lively, festive, rooftop. Open late."},
+
+    {"id": "house_of_tricks", "name": "House of Tricks", "category": "restaurant", "cuisine": "american",
+     "lat": 33.4245, "lon": -111.9380, "website": "https://houseoftricks.com",
+     "opening_hours_public": "Tu-Sa 16:00-22:00", "vegan_tag": false,
+     "price_per_person": 45, "vegan": false, "close_hour": 22, "vibe": ["romantic", "upscale", "quiet"],
+     "website_content": "House of Tricks - upscale New American in a historic Tempe cottage garden. ~$40-50/person. Romantic, quiet, date-night. Reservations recommended. Dinner Tue-Sat."},
+
+    {"id": "chuckbox", "name": "The Chuckbox", "category": "restaurant", "cuisine": "burger",
+     "lat": 33.4230, "lon": -111.9360, "website": "https://thechuckbox.com",
+     "opening_hours_public": null, "vegan_tag": false,
+     "price_per_person": 12, "vegan": false, "close_hour": 21, "vibe": ["divey", "casual", "classic"],
+     "website_content": "The Chuckbox - classic charcoal burgers near ASU. Cash-friendly, ~$10-14/person. No vegan options. Divey, casual. Closes 9pm."},
+
+    {"id": "snooze", "name": "Snooze an A.M. Eatery", "category": "restaurant", "cuisine": "breakfast",
+     "lat": 33.4285, "lon": -111.9420, "website": "https://snoozeeatery.com",
+     "opening_hours_public": "Mo-Su 06:30-14:30", "vegan_tag": false,
+     "price_per_person": 18, "vegan": true, "close_hour": 15, "vibe": ["bright", "casual"],
+     "website_content": "Snooze - breakfast & brunch only. Vegan pancakes available. ~$16-20/person. Bright, casual. CLOSES 2:30PM - not open for dinner."},
+
+    {"id": "gelato_spot", "name": "The Gelato Spot", "category": "dessert", "cuisine": "ice_cream",
+     "lat": 33.4265, "lon": -111.9405, "website": "https://thegelatospot.com",
+     "opening_hours_public": "Mo-Su 12:00-23:00", "vegan_tag": false,
+     "price_per_person": 7, "vegan": true, "close_hour": 23, "vibe": ["chill", "sweet"],
+     "website_content": "The Gelato Spot - gelato & sorbet (dairy-free sorbet is vegan). ~$6-8/person. Chill dessert stop. Open till 11pm."},
+
+    {"id": "cartel_coffee", "name": "Cartel Coffee Lab", "category": "cafe", "cuisine": "coffee",
+     "lat": 33.4258, "lon": -111.9402, "website": "https://cartelroasting.co",
+     "opening_hours_public": null, "vegan_tag": false,
+     "price_per_person": 6, "vegan": true, "close_hour": 22, "vibe": ["chill", "hipster", "quiet"],
+     "website_content": "Cartel Coffee Lab - specialty coffee, oat milk available (vegan). ~$5-7/person. Chill, quiet, hipster. Open till 10pm."},
+
+    {"id": "caseys", "name": "Casey Moore's Oyster House", "category": "bar", "cuisine": "pub",
+     "lat": 33.4230, "lon": -111.9430, "website": "https://caseymoores.com",
+     "opening_hours_public": "Mo-Su 11:00-02:00", "vegan_tag": false,
+     "price_per_person": 15, "vegan": false, "close_hour": 26, "vibe": ["chill", "historic", "patio"],
+     "website_content": "Casey Moore's - historic house bar with big shaded patio. Beers & apps ~$12-18/person. Chill, laid-back, great patio. Open till 2am."},
+
+    {"id": "handlebar", "name": "The Handlebar", "category": "bar", "cuisine": "bar",
+     "lat": 33.4272, "lon": -111.9435, "website": "https://handlebartempe.com",
+     "opening_hours_public": null, "vegan_tag": false,
+     "price_per_person": 12, "vegan": false, "close_hour": 26, "vibe": ["lively", "loud", "sports"],
+     "website_content": "The Handlebar - Mill Ave bar, games, live music. ~$10-15/person. Lively, loud, energetic. Open till 2am."},
+
+    {"id": "zipps", "name": "Zipps Sports Grill", "category": "bar", "cuisine": "sports_bar",
+     "lat": 33.4300, "lon": -111.9400, "website": "https://zippssportsgrill.com",
+     "opening_hours_public": null, "vegan_tag": false,
+     "price_per_person": 15, "vegan": false, "close_hour": 24, "vibe": ["lively", "sports", "casual"],
+     "website_content": "Zipps Sports Grill - wings, beers, TVs. ~$13-17/person. Lively sports-bar vibe. Open till midnight."}
+  ]
+}

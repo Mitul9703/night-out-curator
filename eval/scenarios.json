@@ -1,0 +1,17 @@
+[
+  {
+    "name": "vegan_chill_walkable",
+    "request": "Night out for 4 near ASU Tempe Friday ~7pm, about $40/person total, chill and walkable, one of us is vegan. Dinner + one spot after.",
+    "constraints": {"budget_pp": 40, "vegan_required": true, "target_hour": 19, "max_walk_m": 1200, "max_transit_min": 20, "party_size": 4, "area": {"lat": 33.4255, "lon": -111.9400}}
+  },
+  {
+    "name": "budget_tight_lively",
+    "request": "Two of us want a lively cheap night in Tempe around 8pm, max $25/person total, dinner then a bar. Walkable.",
+    "constraints": {"budget_pp": 25, "vegan_required": false, "target_hour": 20, "max_walk_m": 1500, "max_transit_min": 20, "party_size": 2, "area": {"lat": 33.4270, "lon": -111.9420}}
+  },
+  {
+    "name": "late_dinner_dessert",
+    "request": "Group of 3, late dinner around 9pm near Mill Ave then dessert, about $35/person, walkable, no dietary limits.",
+    "constraints": {"budget_pp": 35, "vegan_required": false, "target_hour": 21, "max_walk_m": 1200, "max_transit_min": 20, "party_size": 3, "area": {"lat": 33.4255, "lon": -111.9400}}
+  }
+]

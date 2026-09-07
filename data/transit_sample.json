@@ -1,0 +1,74 @@
+{
+  "asu_to_downtown": {
+    "from": [
+      33.4242,
+      -111.9281
+    ],
+    "to": [
+      33.4484,
+      -112.074
+    ],
+    "total_min": 49,
+    "walk_min": 12,
+    "transit_min": 37,
+    "legs": [
+      {
+        "mode": "WALK",
+        "route": "",
+        "from": "",
+        "to": "University Dr/Rural Rd",
+        "min": 11
+      },
+      {
+        "mode": "RAIL",
+        "route": "A",
+        "from": "University Dr/Rural Rd",
+        "to": "Downtown Phx Hub/Washington St",
+        "min": 37
+      },
+      {
+        "mode": "WALK",
+        "route": "",
+        "from": "Downtown Phx Hub/Washington St",
+        "to": "",
+        "min": 1
+      }
+    ]
+  },
+  "millave_short": {
+    "from": [
+      33.4255,
+      -111.94
+    ],
+    "to": [
+      33.43,
+      -111.925
+    ],
+    "total_min": 10,
+    "walk_min": 3,
+    "transit_min": 7,
+    "legs": [
+      {
+        "mode": "WALK",
+        "route": "",
+        "from": "",
+        "to": "Mill Av & 5th St",
+        "min": 1
+      },
+      {
+        "mode": "BUS",
+        "route": "EART",
+        "from": "Mill Av & 5th St",
+        "to": "Rural Rd & Rio Salado Pkwy",
+        "min": 7
+      },
+      {
+        "mode": "WALK",
+        "route": "",
+        "from": "Rural Rd & Rio Salado Pkwy",
+        "to": "",
+        "min": 3
+      }
+    ]
+  }
+}
