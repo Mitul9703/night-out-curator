@@ -26,14 +26,14 @@ def check_plan(plan: dict, c: dict) -> dict:
     known = [v for v in venues if v]
     checks, details = {}, {}
 
-    # budget: total price/person across stops
-    if all(venues):
+    # budget: total price/person across stops (requires a complete, resolvable plan)
+    if len(stops) >= 2 and all(venues):
         total = sum(v["price_per_person"] for v in venues)
         checks["budget"] = total <= c["budget_pp"]
         details["budget"] = f"${total}/pp vs cap ${c['budget_pp']}"
     else:
         checks["budget"] = False
-        details["budget"] = "unknown venue id(s)"
+        details["budget"] = f"incomplete/unresolved plan ({len(known)}/{len(stops)} known, need 2)"
 
     # vegan: dinner stop must be vegan-friendly (ground truth)
     if c.get("vegan_required"):
@@ -46,7 +46,7 @@ def check_plan(plan: dict, c: dict) -> dict:
 
     # open: dinner open at target_hour, 'after' open at target_hour+2
     th = c["target_hour"]
-    ok = True
+    ok = len(stops) >= 2
     for s in stops:
         v = GT.get(s["venue_id"])
         need = th if s.get("type") == "dinner" else th + 2

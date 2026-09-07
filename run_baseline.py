@@ -23,15 +23,29 @@ from eval.evaluate import check_plan, GT      # noqa: E402
 
 
 def extract_plan(text: str) -> dict:
-    m = re.findall(r"```json\s*(\{.*?\})\s*```", text, re.DOTALL)
-    blob = m[-1] if m else None
-    if not blob:
-        m = re.findall(r"(\{[^{}]*\"stops\"[\s\S]*?\})", text)
-        blob = m[-1] if m else None
-    try:
-        return json.loads(blob) if blob else {"stops": []}
-    except Exception:
-        return {"stops": []}
+    """Robustly pull the plan JSON out of the model's reply.
+
+    Scans for every balanced {...} object (handles nested braces and a missing
+    closing ``` fence) and returns the last one that parses and contains "stops".
+    """
+    candidates, stack, start = [], [], None
+    for i, ch in enumerate(text):
+        if ch == "{":
+            if not stack:
+                start = i
+            stack.append(ch)
+        elif ch == "}" and stack:
+            stack.pop()
+            if not stack and start is not None:
+                candidates.append(text[start:i + 1])
+    for blob in reversed(candidates):
+        if '"stops"' in blob:
+            for attempt in (blob, blob.replace("'", '"')):
+                try:
+                    return json.loads(attempt)
+                except Exception:
+                    continue
+    return {"stops": []}
 
 
 def main():
